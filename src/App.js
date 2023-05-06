@@ -26,8 +26,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Shiny Pokemon Index</h1>
-      <h4>Type a number to see a shiny!</h4>
+      <h1>Pokemon Index</h1>
+      <h4>Type a number to see a pokemon!</h4>
       <p>Pokemon #</p>
       <input type="number" placeholder="1"onChange={(e)=>(setNumber(e.target.value))}/>
       <h2>Name: {name}</h2>
