@@ -9,12 +9,13 @@ function App() {
   const [weight, setWeight] = useState();
   const [number, setNumber] = useState(1);
 
-  if (number && number>0 && number<1010){URL=`https://pokeapi.co/api/v2/pokemon/${number}`}
-  else URL="https://pokeapi.co/api/v2/pokemon/1"
+  let URL="https://pokeapi.co/api/v2/pokemon/1"
+  if (number && number>0 && number<1010){
+    URL=`https://pokeapi.co/api/v2/pokemon/${number}`
+  }
 
   useEffect(()=>{
     axios.get(URL).then((response) => {
-      //console.log(response.data)
       setData(response.data)
       setName(response.data.name)
       setWeight(response.data.weight)
