@@ -35,9 +35,9 @@ function App() {
       <h3>Weight: {weight}</h3>
       <img src={data ? data.sprites.front_default : "<p>No image available</p>"}></img>
       <p>My abilities are:</p>
-      {data ? data.abilities.map((value, key) => {
+      {data ? data.abilities.map((value, index) => {
       return(
-        <div key={key}>
+        <div key={index}>
           {value.ability.name}
         </div>
       )
